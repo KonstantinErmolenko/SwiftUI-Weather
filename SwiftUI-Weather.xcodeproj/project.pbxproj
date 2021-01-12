@@ -12,6 +12,7 @@
 		A967DBA925ACC33E00244737 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A967DBA825ACC33E00244737 /* ContentView.swift */; };
 		A967DBAB25ACC33E00244737 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A967DBAA25ACC33E00244737 /* Assets.xcassets */; };
 		A967DBAE25ACC33E00244737 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A967DBAD25ACC33E00244737 /* Preview Assets.xcassets */; };
+		A982B91225AE0954000C3125 /* WeatherForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A982B91125AE0954000C3125 /* WeatherForecast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		A967DBAA25ACC33E00244737 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A967DBAD25ACC33E00244737 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A967DBAF25ACC33E00244737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A982B91125AE0954000C3125 /* WeatherForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				A967DBA625ACC33E00244737 /* SwiftUI_WeatherApp.swift */,
 				A967DBA825ACC33E00244737 /* ContentView.swift */,
 				A951F00725ADABAD003153B3 /* WeatherButton.swift */,
+				A982B91125AE0954000C3125 /* WeatherForecast.swift */,
 				A967DBAA25ACC33E00244737 /* Assets.xcassets */,
 				A967DBAF25ACC33E00244737 /* Info.plist */,
 				A967DBAC25ACC33E00244737 /* Preview Content */,
@@ -144,6 +147,7 @@
 				A967DBA925ACC33E00244737 /* ContentView.swift in Sources */,
 				A967DBA725ACC33E00244737 /* SwiftUI_WeatherApp.swift in Sources */,
 				A951F00825ADABAD003153B3 /* WeatherButton.swift in Sources */,
+				A982B91225AE0954000C3125 /* WeatherForecast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

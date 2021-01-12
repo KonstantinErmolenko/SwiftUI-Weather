@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
   
   @State private var isNight = false
+  @State var forecasts: [WeatherForecast]
   
   var body: some View {
     ZStack {
@@ -18,7 +19,7 @@ struct ContentView: View {
       VStack {
         CityNameView(cityName: "Saint Petersburg")
         MainWeatherStatusView(isNight: $isNight, temperature: -8)
-        DayForecastSymbols()
+        ForecastFeed(forecasts: $forecasts)
         
         Spacer()
         
@@ -38,7 +39,24 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
-    ContentView()
+    let forecasts = [
+      WeatherForecast(dayOfWeek: "TUE",
+                      imageName: "cloud.hail.fill",
+                      temperature: -9),
+      WeatherForecast(dayOfWeek: "WED",
+                      imageName: "sun.max.fill",
+                      temperature: -11),
+      WeatherForecast(dayOfWeek: "THU",
+                      imageName: "wind.snow",
+                      temperature: -10),
+      WeatherForecast(dayOfWeek: "FRI",
+                      imageName: "snow",
+                      temperature: -9),
+      WeatherForecast(dayOfWeek: "SAT",
+                      imageName: "sun.max.fill",
+                      temperature: -7)
+    ]
+    ContentView(forecasts: forecasts)
   }
 }
 
@@ -113,24 +131,17 @@ struct MainWeatherStatusView: View {
   }
 }
 
-struct DayForecastSymbols: View {
+struct ForecastFeed: View {
+  
+  @Binding var forecasts: [WeatherForecast]
+  
   var body: some View {
     HStack(spacing: 26) {
-      WeatherDayView(dayOfWeek: "TUE",
-                     imageName: "cloud.hail.fill",
-                     temperature: -15)
-      WeatherDayView(dayOfWeek: "WED",
-                     imageName: "sun.max.fill",
-                     temperature: -11)
-      WeatherDayView(dayOfWeek: "THU",
-                     imageName: "wind.snow",
-                     temperature: -10)
-      WeatherDayView(dayOfWeek: "FRI",
-                     imageName: "snow",
-                     temperature: -13)
-      WeatherDayView(dayOfWeek: "SAT",
-                     imageName: "sun.max.fill",
-                     temperature: -16)
+      ForEach(forecasts, id: \.self) { forecast in
+        WeatherDayView(dayOfWeek: forecast.dayOfWeek,
+                       imageName: forecast.imageName,
+                       temperature: forecast.temperature)
+      }
     }
   }
 }
