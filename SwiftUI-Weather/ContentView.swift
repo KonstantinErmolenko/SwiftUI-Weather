@@ -37,6 +37,16 @@ struct ContentView: View {
           }
 
           Spacer()
+          
+          Button {
+            print("Hello!")
+          } label: {
+            WeatherButton(title: "Change Day Time",
+                          bacgroundColor: .white,
+                          textColor: .blue)
+          }
+          
+          Spacer()
        }
     }
   }
